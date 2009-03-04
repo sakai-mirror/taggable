@@ -202,4 +202,25 @@ public interface TaggableActivityProducer {
 	 *         cannot access it.
 	 */
 	TaggableItem getItem(String itemRef, TaggingProvider provider);
+	
+	/**
+	 * Method to get the permission to add to a secirity advisor so we can 
+	 * view the item (in case we don't have normal permissions)
+	 * @return
+	 */
+	String getItemPermissionOverride();
+	
+	/**
+	 * Method to figure out if there are any submissions
+	 * @return
+	 */
+	boolean hasSubmissions(TaggableActivity activity,
+			TaggingProvider provider);
+	
+	/**
+	 * Method to figure out if there are any submissions
+	 * @return
+	 */
+	boolean hasSubmissions(TaggableActivity activity, String userId,
+			TaggingProvider provider);
 }

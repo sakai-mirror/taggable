@@ -60,4 +60,29 @@ public interface TaggableItem {
 	 * @return The activity to which this item belongs.
 	 */
 	public TaggableActivity getActivity();
+	
+	/**
+	 * Get the url that will render detail information about the item
+	 * @return
+	 */
+	public String getItemDetailUrl();
+	
+	/**
+	 * Get the params that will be added to the item's url
+	 * @return
+	 */
+	public String getItemDetailUrlParams();
+	
+	/**
+	 * Get the url for the icon that will represent this item
+	 * @return
+	 */
+	public String getIconUrl();
+	
+	/**
+	 * Determine if decorating the itemDetailUrl is necessary
+	 * @return
+	 */
+	public boolean getUseDecoration();
+	
 }
