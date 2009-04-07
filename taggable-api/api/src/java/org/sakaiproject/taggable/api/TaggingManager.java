@@ -265,9 +265,16 @@ public interface TaggingManager {
 	
 	public TaggingHelperInfo createTaggingHelperInfoObject(String helperId, String name,
 			String description, Map<String, ? extends Object> parameterMap,
-			TaggingProvider provider, String placement);
+			TaggingProvider provider);
 	
 	public TagList createTagList();
 	
+	public TagList createTagList(List<TagColumn> columns);
+	
 	public Tag createTag(Link link);
+	
+	public void removeLinks(TaggableActivity activity) throws PermissionException;
+	
+	public TagColumn createTagColumn(String name, String displayName,
+			String description, boolean sortable);
 }
