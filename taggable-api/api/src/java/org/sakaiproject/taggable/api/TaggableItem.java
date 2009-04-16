@@ -21,6 +21,8 @@
 
 package org.sakaiproject.taggable.api;
 
+import java.util.Date;
+
 /**
  * An object related to a tagged activity. For example, when tagging an
  * assignment, the items would be submissions for the assignment.
@@ -84,5 +86,30 @@ public interface TaggableItem {
 	 * @return
 	 */
 	public boolean getUseDecoration();
+	
+	/**
+	 * Get the display name of the owner of this object
+	 * @return
+	 */
+	public String getOwner();
+	
+	/**
+	 * Get the site title of the site where this object lives
+	 * @return
+	 */
+	public String getSiteTitle();
+	
+	/**
+	 * Get the item's last modification date
+	 * @return
+	 */
+	public Date getLastModifiedDate();
+	
+	/**
+	 * Get the type name of the item
+	 * @return
+	 */
+	public String getTypeName();
+	
 	
 }
