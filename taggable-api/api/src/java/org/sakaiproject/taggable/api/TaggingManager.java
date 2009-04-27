@@ -181,10 +181,12 @@ public interface TaggingManager {
 	 *            The provider that is getting the item. This allows the
 	 *            producer to selectively return an item, or none at all,
 	 *            depending on the given provider.
+	 * @param getMyItemsOnly
+	 * 			  This flag will return only items where the owner matches userId              
 	 * @return The taggable item, or null if no such item exists or the provider
 	 *         cannot access it.
 	 */
-	public TaggableItem getItem(String itemRef, TaggingProvider provider);
+	public TaggableItem getItem(String itemRef, TaggingProvider provider, boolean getMyItemOnly);
 
 	/**
 	 * Method to get a list of taggable items for the activity identified by the
@@ -196,10 +198,12 @@ public interface TaggingManager {
 	 *            The provider that is getting the items. This allows the
 	 *            producers to selectively return different lists of items for
 	 *            the referenced activity depending on the given provider.
+	 * @param getMyItemsOnly
+	 * 			  This flag will return only items where the owner matches userId            
 	 * @return A list, possibly empty, of taggable items.
 	 */
 	public List<TaggableItem> getItems(String activityRef,
-			TaggingProvider provider);
+			TaggingProvider provider, boolean getMyItemsOnly);
 
 	/**
 	 * Method to determine if there are any tagging providers available.

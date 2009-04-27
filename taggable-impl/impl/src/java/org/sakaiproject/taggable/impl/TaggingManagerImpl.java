@@ -121,17 +121,17 @@ public class TaggingManagerImpl implements TaggingManager {
 		return taggingProviders;
 	}
 
-	public TaggableItem getItem(String itemRef, TaggingProvider provider) {
-		return findProducerByRef(itemRef).getItem(itemRef, provider);
+	public TaggableItem getItem(String itemRef, TaggingProvider provider, boolean getMyItemOnly) {
+		return findProducerByRef(itemRef).getItem(itemRef, provider, getMyItemOnly);
 	}
 
 	public List<TaggableItem> getItems(String activityRef,
-			TaggingProvider provider) {
+			TaggingProvider provider, boolean getMyItemsOnly) {
 		List<TaggableItem> items = new ArrayList<TaggableItem>();
 		TaggableActivityProducer producer = findProducerByRef(activityRef);
 		if (producer != null) {
 			items = producer.getItems(getActivity(activityRef, provider),
-					provider);
+					provider, getMyItemsOnly);
 		}
 		return items;
 	}
