@@ -12,9 +12,9 @@
   <artifactId>taggable-base</artifactId>
   <packaging>pom</packaging>
   <scm>
-    <connection>scm:svn:https://source.sakaiproject.org/contrib/syracuse/taggable/trunk</connection>
-    <developerConnection>scm:svn:https://source.sakaiproject.org/contrib/syracuse/taggable/trunk</developerConnection>
-    <url>https://source.sakaiproject.org/contrib/syracuse/taggable/trunk</url>
+    <connection>scm:svn:https://source.sakaiproject.org/contrib/syracuse/taggable/branches/sakai-2.7.x</connection>
+    <developerConnection>scm:svn:https://source.sakaiproject.org/contrib/syracuse/taggable/branches/sakai-2.7.x</developerConnection>
+    <url>https://source.sakaiproject.org/contrib/syracuse/taggable/branches/sakai-2.7.x</url>
   </scm>
   <modules>
     <module>taggable-api/api</module>
